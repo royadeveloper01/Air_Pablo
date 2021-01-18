@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto+Condensed&display=swap');
+
 /* General Styles */
 
 * {
@@ -13,28 +14,86 @@ html {
     color: #555;
 }
 
+ul,
 nav {
     list-style: none;
 }
 
 a {
     text-decoration: none;
-    opacity: 0.75;
-    color: rgb(160, 44, 44);
+    opacity: 0.80;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 a:hover {
     opacity: 1;
 }
 
+a.btn {
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #6d7ac4;
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section:not(.hero):nth-child(even){
+    background-color: #f5f5f5;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color:#6d7ac4;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 20px;
+
+}
+
 /* Header Styles*/
+
 header {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 35px 100px 0;
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
+    color: #ffffff;
 }
 
 @keyframes fadein {
@@ -58,4 +117,96 @@ header nav {
 
 header nav li {
     margin: 0 15px;
+}
+
+/* Hero Styles */
+
+.hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero h3 {
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.hero a.btn {
+    padding: 20px 46px;
+}
+
+.hero-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1.5s forwards;
+}
+
+@keyframes slidefade {
+    50% {
+        opacity: 0.5;
+        margin: 0;
+    }
+
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+
+/* Destination Section */
+
+.destinations .grid li {
+    height: 350px;
+    background-size: cover;
+    background-clip: content-box;
+    padding: 20px;
+    background-position: center;
+}
+
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
+
+.destinations .grid li.large {
+    flex-basis: 60%;
+}
+
+/* Services Sections */
+
+.services .grid li {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 50px;
+}
+
+.services .grid li i {
+    margin-bottom: 20px;
+    color: #6d7ac4;
+}
+
+.services .grid li h4 {
+    font-size: 20px;
+    margin: 15px 0px;
 }
