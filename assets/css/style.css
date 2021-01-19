@@ -11,7 +11,7 @@
 html {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
-    color: #555;
+    scroll-behavior: smooth;
 }
 
 ul,
@@ -30,20 +30,24 @@ a:hover {
     opacity: 1;
 }
 
-a.btn {
+.btn {
     border-radius: 10px;
+    padding: 20px 46px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     background-color: #6d7ac4;
-    opacity: 1;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
-a.btn:hover {
+.btn:hover {
     filter: brightness(0.80);
 }
 
-a.btn:active {
+.btn:active {
     transform: scaleY(0.8);
 }
 
@@ -87,7 +91,12 @@ section p {
     margin-bottom: 30px;
     text-align: center;
     padding: 0 20px;
+}
 
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
 }
 
 /* Header Styles*/
@@ -102,6 +111,7 @@ header {
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: #ffffff;
+    z-index: 1;
 }
 
 @keyframes fadein {
@@ -127,6 +137,21 @@ header nav li {
     margin: 0 15px;
 }
 
+@media (max-width: 800px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    header nav {
+        margin: 30px 0px;
+    }
+}
+
 /* Hero Styles */
 
 .hero {
@@ -135,17 +160,10 @@ header nav li {
     text-align: center;
     min-height: 100vh;
     color: #ffffff;
-}
-
-.hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: #80a3db;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    z-index: -1;
-    background-color: #80a3db;
 }
 
 .hero h1 {
@@ -158,10 +176,6 @@ header nav li {
     font-weight: normal;
     font-size: 28px;
     margin-bottom: 40px;
-}
-
-.hero a.btn {
-    padding: 20px 46px;
 }
 
 .hero-content-area {
@@ -179,6 +193,24 @@ header nav li {
     100% {
         opacity: 1;
         margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h3 {
+        font-size: 25px;
+    }
+
+    .hero .btn {
+        padding: 15px;
     }
 }
 
@@ -201,6 +233,20 @@ header nav li {
     flex-basis: 60%;
 }
 
+@media (max-width: 1100px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
 /* Services Sections */
 
 .services .grid li {
@@ -219,6 +265,14 @@ header nav li {
     margin: 15px 0px;
 }
 
+@media (max-width: 800px) {
+    .services .grid li {
+        flex-basis: 100%;
+        font-size: 16px;
+        /* padding: 20px; */
+    }
+}
+
 /* Testimonials Sections */
 
 .testimonials .quote {
@@ -230,6 +284,16 @@ header nav li {
 
 .testimonials .author {
     font-weight: bold;
+}
+
+@media (max-width: 1100px) {
+    .testimonials .quote {
+        font-size: 16px;
+    }
+
+    .testimonials .author {
+        font-size: 13px;
+    }
 }
 
 /* Contact Sections */
@@ -247,9 +311,17 @@ input[type=email],textarea {
     margin: 20px 0px;
     width: 600px;
     background-color: transparent;
-    border: 1px solid  #6d7ac4;
-    outline: none;
+    border: 1px solid #6d7ac4;
     font-size: 18px;
+}
+
+.contact form input[type=name]:focus,
+.contact form input[type=email]:focus,
+.contact form textarea:focus {
+    background-color: rgb(255, 255, 255);
+    color: #6d7ac4;
+    font-weight: bold;
+    outline: 1px solid;
 }
 
 .contact form .btn {
@@ -260,6 +332,13 @@ input[type=email],textarea {
     margin: 30px 0px;
 }
 
+@media (max-width: 800px) {
+    .contact form input[type=name],
+    input[type=email],textarea {
+        width: 100%;
+        padding: 10px;
+    }
+}
 /* Footer Sections*/
 
 footer {
@@ -281,4 +360,20 @@ footer .social-links {
 
 footer .social-links li {
     margin: 15px;
+}
+
+.social-links .whatsapp:hover {
+    color: #008000;
+}
+
+.social-links .facebook:hover {
+    color: #0404e9;
+}
+
+.social-links .twitter:hover {
+    color: #6262e2;
+}
+
+.social-links .instagram:hover {
+    color: #aa2b79;
 }

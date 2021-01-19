@@ -14,18 +14,17 @@
         <h2><a href="#">Air Pablo</a></h2>
         <nav>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="background-image" style="background-image: url(images/hero.jpg);">
-        </div>
+    <section class="hero" style="background-image: url(images/hero.jpg);">
         <div class="hero-content-area">
             <h1>Air Pablo</h1>
             <h3>We Take You Round The World</h3>
-            <a href="#" class="btn">Contact Us Now</a>
+            <button class="btn">Contact Us Now</button>
+            <button class="btn">Book Now</button>
         </div>
     </section>
 
@@ -84,27 +83,28 @@
         <p class="author">- Mr. Achiever</p>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <h3 class="title">Contact Us:</h3>
         <hr>
         
         <form>
-            <input type="name" placeholder="Full Name">
-            <input type="email" placeholder="Email">
+            <input type="name" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
             <textarea name="message" cols="20" rows="10" placeholder="Enter your message here ..." required> </textarea>
-            <a href="#" class="btn">Submit</a>
+            <button class="btn">Submit</button>
+            <!-- <a href="#" class="btn">Submit</a> -->
         </form>
     </section>
 
     <footer>
-        <p>We Take You Round The World</p>
         <p>Air Pablo&copy;2021</p>
+        <p>We Take You Round The World</p>
 
         <ul class="social-links">
-            <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
-            <li><a href=""><i class="fab fa-facebook fa-2x"></i></a></li>
-            <li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
-            <li><a href=""><i class="fab fa-instagram fa-2x"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter fa-2x twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook fa-2x facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-whatsapp fa-2x whatsapp"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x instagram"></i></a></li>
         </ul>
     </footer>
 </body>
