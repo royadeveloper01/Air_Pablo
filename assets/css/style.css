@@ -363,17 +363,32 @@ footer .social-links li {
 }
 
 .social-links .whatsapp:hover {
-    color: #008000;
+    color: #075e54;
 }
 
 .social-links .facebook:hover {
-    color: #0404e9;
+    color: #3b5998;
 }
 
 .social-links .twitter:hover {
-    color: #6262e2;
+    color: #00acee;
 }
 
 .social-links .instagram:hover {
-    color: #aa2b79;
+    color: #8134AF;
+}
+
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        /* padding: 10px; */
+    }
+
+    footer p {
+        margin: 5px 0px;
+    }
+
+    footer .social-links li {
+        margin: 10px;
+    }
 }
